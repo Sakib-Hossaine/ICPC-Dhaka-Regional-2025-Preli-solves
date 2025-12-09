@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl '\n'
+#define fast ios_base::sync_with_stdio(false); cin.tie(0);
+#define t_case int t; cin>>t; while(t--)
+const ll N = (ll) 2e5+5;
+ll row[N],col[N];
+void solve()
+{
+ll a,n,m,i,j;
+cin>> n>>m;
+ for( i=0; i<max(n,m);i++){
+   row[i]=0;
+   col[i]=0;
+ }
+ for (i=0; i<n;i++){
+   for(j=0;j<m;j++){
+   cin>>a;
+   row[i]^=a;
+   col[j]^=a;
+   }
+ }
+    ll ans =0,del = 0;
+    for(i=0; i<n; i++){
+      ans+=row[i];
+      //cout<<ans<<endl;
+    }
+    for(j=0; j<m; j++){
+      ans+=col[j];
+      //cout<<ans<<endl;
+    }
+ for (i=0; i<n;i++){
+   for(j=0;j<m;j++){
+   //cout<<row[i]<<" "<<col[j]<<" ";
+del = max(del,(row[i]&col[j]));  // cout<<endl;
+   }
+ 
+}cout<<ans-(2*del)<<endl;
+ }
+ 
+ 
+int32_t main()
+{
+ fast
+ t_case
+ solve();
+
+
+}
