@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl '\n'
+#define fast ios_base::sync_with_stdio(false); cin.tie(0);
+#define t_case int t; cin>>t; while(t--)
+const ll N = (ll) 2e5+5;
+ll row[N],col[N];
+void solve()
+{
+  int a,v,l,n;
+  cin>>a>>v>>l>>n;
+  if(n<a&&n<v)
+  cout<<"Yes"<<endl;
+  else cout<<"NO"<<endl; 
+ }
+ 
+ 
+int32_t main()
+{
+ fast
+ t_case
+ solve();
+
+
+}
